@@ -2,6 +2,8 @@
 
 namespace SendPulse;
 
+use stdClass;
+
 /*
  * SendPulse REST API PHP Class
  *
@@ -178,7 +180,7 @@ class SendpulseApi implements SendpulseApi_Interface
             $this->getToken();
             $return = $this->sendRequest($path, $method, $data);
         } else {
-            $return = new \stdClass();
+            $return = new stdClass();
             $return->data = json_decode($responseBody);
             $return->http_code = $headerCode;
         }
