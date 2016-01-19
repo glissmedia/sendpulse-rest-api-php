@@ -9,7 +9,7 @@ The recommended way to install the library is through [Composer](http://getcompo
 # Install Composer
 curl -sS https://getcomposer.org/installer | php
 
-# Add Chain-PHP as a dependency
+# Add sendpulse-rest-api as a dependency
 php composer.phar require wensleydale/sendpulse-rest-api:dev-master
 ```
 
