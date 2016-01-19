@@ -1,5 +1,7 @@
 <?php
 
+require 'vendor/autoload.php';
+
 use SendPulse\SendpulseApi;
 
 // https://login.sendpulse.com/settings/#api
