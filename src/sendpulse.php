@@ -2,6 +2,8 @@
 
 namespace SendPulse;
 
+use Exception;
+use Memcache;
 use stdClass;
 
 /*
