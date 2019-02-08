@@ -59,6 +59,14 @@ interface SendpulseApi_Interface
     public function getEmailsFromBook($id);
 
     /**
+     * @param $id
+     * @param $variable
+     * @param $value
+     * @return mixed
+     */
+    public function getEmailsFromBookVariables($id, $variable, $value);
+
+    /**
      * Add new emails to book
      *
      * @param $bookId

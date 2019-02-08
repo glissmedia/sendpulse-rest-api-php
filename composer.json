@@ -1,13 +1,13 @@
 {
-    "name": "wensleydale/sendpulse-rest-api-php",
-    "description": "Composer enabled version of the SendPulse REST client library",
+    "name": "glissmedia/sendpulse-rest-api-php",
+    "description": "Composer enabled version of the SendPulse REST client library (fork by wensleydale)",
     "keywords": ["sendpulse"],
     "minimum-stability": "dev",
     "license": "MIT",
     "authors": [
         {
-            "name": "Gareth Davies",
-            "email": "hello@garethtdavies.com"
+            "name": "Roman Kapralov",
+            "email": "r.kapralov@glissmedia.ru"
         }
     ],
     "autoload": {

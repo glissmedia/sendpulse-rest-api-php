@@ -343,6 +343,29 @@ class SendpulseApi implements SendpulseApi_Interface
     }
 
     /**
+     * @param $id
+     * @param $variable
+     * @param $value
+     * @return mixed|stdClass
+     */
+    public function getEmailsFromBookVariables($id, $variable, $value)
+    {
+        if (empty($id)) {
+            return $this->handleError('Empty book id');
+        }
+        if (empty($variable)) {
+            return $this->handleError('Empty book variable');
+        }
+        if (empty($value)) {
+            return $this->handleError('Empty book value');
+        }
+
+        $requestResult = $this->sendRequest('addressbooks/' . $id . '/variables/' . $variable . '/' . $value);
+
+        return $this->handleResult($requestResult);
+    }
+
+    /**
      * Add new emails to address book
      *
      * @param $bookId
