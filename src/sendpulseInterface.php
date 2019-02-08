@@ -211,6 +211,13 @@ interface SendpulseApi_Interface
     public function emailStatByCampaigns($email);
 
     /**
+     * @param $id
+     * @param $data
+     * @return mixed
+     */
+    public function changeVariableForEmail($id, $data);
+
+    /**
      * Show emails from blacklist
      */
     public function getBlackList();

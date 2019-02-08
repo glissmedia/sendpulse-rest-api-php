@@ -716,6 +716,28 @@ class SendpulseApi implements SendpulseApi_Interface
     }
 
     /**
+     * @param $id
+     * @param $data
+     * @return mixed|stdClass
+     */
+    public function changeVariableForEmail($id, $data)
+    {
+        if (empty($id)) {
+            return $this->handleError('Empty id book');
+        }
+        if (empty($data)) {
+            return $this->handleError('Empty data');
+        }
+        if (!is_array($data)) {
+            return $this->handleError('data must by array [["email" => email@email.com, "variables" => ["variable" => "value"]]');
+        }
+
+        $requestResult = $this->sendRequest('addressbooks/' . $id . '/emails/variable', 'POST', $data);
+
+        return $this->handleResult($requestResult);
+    }
+
+    /**
      * Get all emails from blacklist
      *
      * @return mixed
